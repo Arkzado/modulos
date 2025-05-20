@@ -1,0 +1,79 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.results {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.result-item {
+    border-bottom: 1px solid #e9ecef;
+    padding: 0.5rem 0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.shape-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.form-title {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.spinner-border {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 991.98px) {
+    .col-md-4 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .form-container {
+        padding: 1rem;
+    }
+}

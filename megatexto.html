@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Megatexto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/megatexto.css">
+    <script defer src="./js/mainTexto.js" type="module"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Figuras</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1 class="display-4">MegaTexto</h1>
+            <hr>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">Megatexto</div>
+            <div class="card-body">
+                <textarea id="megaTexto" class="form-control main-textarea"
+                    placeholder="Ingrese aquí el Megatexto..."></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-m-6 col-lg-4 mb-3">
+                <div class="card operation-card">
+                    <div class="card-header">
+                        <i class="fas fa-text-width me-2"></i>Longitud del texto
+                    </div>
+                    <div class="card-body result-item">
+                        <p class="card-text">Calcule la longitud total del texto ingresado.</p>
+
+                        <div id="resultadoLongitud" class="alert alert-secondary">
+                            <span class="fw-bold">Resultado:</span>
+                            <span id="mostrarLongitud">-</span>
+                        </div>
+
+                        <br>
+
+                        <button id="btnLongitud" class="btn btn-primary w-100">
+                            <i class="fas fa-calculator me-2"></i>Calcular longitud
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card operation-card">
+                    <div class="card-header">
+                        <i class="fas fa-search-location me-2"></i>Carácter en posición
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="posicionCaracter" class="form-label">Posición del carácter:</label>
+                            <input type="number" id="posicionCaracter" class="form-control" min="1" placeholder="Ej: 1">
+                        </div>
+
+                        <div id="resultadoCaracter" class="alert alert-secondary">
+                            <span class="fw-bold">Resultado: </span>
+                            <span id="mostrarCaracter">-</span>
+                        </div>
+
+                        <button id="btnCaracter" class="btn btn-primary w-100">
+                            <i class="fas fa-search me-2"></i>Obtener carácter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card operation-card">
+                    <div class="card-header">
+                        <i class="fas fa-check-double me-2"></i>Verificar palabra
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="palabraIngresada" class="form-label">Palabra a verificar:</label>
+                            <input type="text" id="palabraIngresada" class="form-control" placeholder="Ej: hola">
+                        </div>
+
+                        <div id="verificar" class="alert alert-secondary">
+                            <span class="fw-bold">Resultado: </span>
+                            <span id="mostrarVerificacion">-</span>
+                        </div>
+
+                        <button id="btnVerificarPalabra" class="btn btn-primary w-100">
+                            <i class="fas fa-check me-2"></i>Verificar existencia
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-6 mb-3">
+                <div class="card operation-card">
+                    <div class="card-header">
+                        <i class="fas fa-exchange-alt me-2"></i>Reemplazar palabra
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-5">
+                            <div class="col-m-6">
+                                <label for="palabraAnterior" class="form-label">Palabra a reemplazar:</label>
+                                <input type="text" id="palabraAnterior" class="form-control" placeholder="Ej: hola">
+                            </div>
+                            <div class="col-m-6">
+                                <label for="palabraNueva" class="form-label">Reemplazar por:</label>
+                                <input type="text" id="palabraNueva" class="form-control" placeholder="Ej: adiós">
+                            </div>
+                        </div>
+                        <button id="btnReemplazarPalabra" class="btn btn-primary w-100">
+                            <i class="fas fa-sync-alt me-2"></i>Reemplazar todas
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6 mb-3">
+                <div class="card operation-card">
+                    <div class="card-header">
+                        <i class="fas fa-cut me-2"></i>Extraer porción
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-2 mb-md-0">
+                                <label for="posicionInicial" class="form-label">Posición inicial:</label>
+                                <input type="number" id="posicionInicial" class="form-control" min="1"
+                                    placeholder="Ej: 1">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="posicionFinal" class="form-label">Posición final:</label>
+                                <input type="number" id="posicionFinal" class="form-control" min="1"
+                                    placeholder="Ej: 10">
+                            </div>
+                        </div>
+
+                        <div id="extraerTexto" class="alert alert-secondary">
+                            <span class="fw-bold">Resultado: </span>
+                            <span id="mostrarExtraccion">-</span>
+                        </div>
+
+                        <br>
+
+                        <button id="btnExtraerTexto" class="btn btn-primary w-100">
+                            <i class="fas fa-scissors me-2"></i>Extraer texto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

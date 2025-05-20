@@ -1,0 +1,78 @@
+body {
+    background-color: #f8f9fa;
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
+.header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: #4a6baf;
+    color: white;
+    font-weight: bold;
+}
+
+.main-textarea {
+    min-height: 150px;
+    margin-bottom: 1.5rem;
+    resize: vertical;
+    resize: none;
+    /* prevent user resizing in any direction */
+}
+
+.results-area {
+    margin-top: 2rem;
+    display: none;
+}
+
+.btn-primary {
+    background-color: #4a6baf;
+    border-color: #4a6baf;
+}
+
+.btn-primary:hover {
+    background-color: #3a559a;
+    border-color: #3a559a;
+}
+
+.operation-card {
+    height: 100%;
+}
+
+@media (max-width: 767.98px) {
+    .operation-card {
+        margin-bottom: 1rem;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.card-footer {
+    background-color: rgba(74, 107, 175, 0.1);
+}
